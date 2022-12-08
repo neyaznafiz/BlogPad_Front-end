@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import React from "react";
-import { Main } from "../Layout";
-import { About, AllBlogs, Home, SignIn, SignUp } from "../Pages";
+import { Dashboard, Main } from "../Layout";
+import { About, AddBlog, AllBlogs, BlogList, Home, SignIn, SignUp } from "../Pages";
 
 const routes = createBrowserRouter([
   {
@@ -27,6 +27,20 @@ const routes = createBrowserRouter([
       {
         path: "/sign-in",
         element: <SignIn />,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <BlogList />,
+      },
+      {
+        path: "add-blog",
+        element: <AddBlog />,
       },
     ],
   },
