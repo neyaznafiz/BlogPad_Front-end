@@ -1,6 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": "src"
-  },
-  "include": ["src"]
+    "jsx": "preserve",
+    "baseUrl": "./src",
+    "paths": {
+      "@/Components/*": ["./components/*"],
+      "@/Layout/*": ["./Layout/*"],
+      "@/Pages/*": ["./Pages/*"],
+      "@/routes/*": ["./routes/*"],
+      "@/Assets/*": ["./Assets/*"],
+      "@/ReduxFile/*": ["./ReduxFile/*"]
+    }
+  }
 }

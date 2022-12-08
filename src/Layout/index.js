@@ -1,3 +1,2 @@
 export * from "./Main/Main"
-export * from "./Main/Navbar"
-export * from "./Dashboard/Dashboard"
+export * from "./Dashboard/Dashboard.jsx"
