@@ -6,9 +6,9 @@ import signInIcon from "../../Assets/Icon/signin-icon-.json";
 import { signOut } from "firebase/auth";
 import auth from "../../Firebase/firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { IoMdLogOut } from "react-icons/io";
 
 export function Navbar() {
-
   const [user] = useAuthState(auth);
 
   const handleSignOut = () => {
@@ -72,13 +72,21 @@ export function Navbar() {
           </Link>
         </div>
         <div>
-          {!user ? <Link to="/sign-in">
-            <Lottie
-              animationData={signInIcon}
-              className="h-[32px] w-[32px] mb-1 rounded-full hover:scale-125 transition-all duration-300"
-            />
-          </Link>
-            : <button onClick={handleSignOut}>SignOut</button>}
+          {!user ? (
+            <Link to="/sign-in">
+              <Lottie
+                animationData={signInIcon}
+                className="h-[32px] w-[32px] mb-1 rounded-full hover:scale-125 transition-all duration-300"
+              />
+            </Link>
+          ) : (
+            <button
+              onClick={handleSignOut}
+              className=" flex items-center gap-x-1 hover:text-xl transition-all duration-300"
+            >
+              <IoMdLogOut className="text-xl" /> SIGN-OUT
+            </button>
+          )}
         </div>
       </div>
     </div>

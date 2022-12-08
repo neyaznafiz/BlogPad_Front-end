@@ -1,7 +1,7 @@
 import React from "react";
 import Lottie from "lottie-react";
-import blogging from "../../../Assets/Icon/Blogging.json";
-import mountain from "../../../Assets/cloud.jpg";
+import blogging from "@/Assets/Icon/Blogging.json";
+import mountain from "@/Assets/cloud.jpg";
 
 const Banner = () => {
   return (

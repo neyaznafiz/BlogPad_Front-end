@@ -3,7 +3,7 @@
     "jsx": "preserve",
     "baseUrl": "./src",
     "paths": {
-      "@/Components/*": ["./components/*"],
+      "@/Components/*": ["./Components/*"],
       "@/Layout/*": ["./Layout/*"],
       "@/Pages/*": ["./Pages/*"],
       "@/routes/*": ["./routes/*"],
