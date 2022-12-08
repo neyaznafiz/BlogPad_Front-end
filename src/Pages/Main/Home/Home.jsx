@@ -3,7 +3,7 @@ import Banner from './Banner';
 
 export const Home = () => {
     return (
-        <div className='side-p h-screen '>
+        <div className='side-p'>
           <Banner/>
         </div>
     );

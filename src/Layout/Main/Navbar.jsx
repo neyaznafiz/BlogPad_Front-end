@@ -10,7 +10,7 @@ export function Navbar() {
   const { pathname } = useLocation();
 
   return (
-    <div className="flex justify-between items-end py-2 fixed left-[5%] right-[7%] pt-[2%] z-[999] ">
+    <div className={`flex justify-between items-end py-2 fixed left-[4.9%] right-[6.6%] pt-[2%] z-[999] ${pathname == ("/sign-in" || "/sign-up") ? "bg-gradient-to-r from-[#D8D8D8] to-[#EAEAEA]" : "bg-secondary"} `}>
       <div className="relative w-80">
         <Link to="/" className="absolute -left-9 -bottom-10">
           <img src={logo} alt="BlogPad Logo" className="w-80" />
