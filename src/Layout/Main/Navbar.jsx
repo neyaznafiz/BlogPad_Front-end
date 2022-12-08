@@ -10,7 +10,7 @@ export function Navbar() {
   const { pathname } = useLocation();
 
   return (
-    <div className="flex justify-between items-end ">
+    <div className="flex justify-between items-end py-2 fixed left-[5%] right-[7%] z-[999]">
       <div className="relative w-80 h-20">
         <Link to="/" className="absolute -bottom-10">
           <img src={logo} alt="BlogPad Logo" className="w-80" />

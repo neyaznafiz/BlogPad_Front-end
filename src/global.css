@@ -4,10 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
 body{
     background-color: #F2EFE4;
-    padding: 0 7% 0 7%;
+    /* padding: 0 7% 0 7%; */
     font-family: "Quicksand", sans-serif;
+    min-height: 100vh;
 }
 
 .bdr{
