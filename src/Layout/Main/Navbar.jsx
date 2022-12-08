@@ -3,14 +3,33 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../Assets/blogpad-Logo.png";
 import Lottie from "lottie-react";
 import signInIcon from "../../Assets/Icon/signin-icon-.json";
+import { signOut } from "firebase/auth";
+import auth from "../../Firebase/firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export function Navbar() {
-  const activeClass = "text-primary border-b border-primary";
 
+  const [user] = useAuthState(auth);
+
+  const handleSignOut = () => {
+    signOut(auth);
+  };
+
+  const activeClass = "text-primary border-b border-primary";
   const { pathname } = useLocation();
 
   return (
-    <div className={`flex justify-between items-end py-2 fixed left-[4.9%] right-[6.6%] pt-[2%] z-[999] ${pathname == ("/sign-in" || "/sign-up") ? "bg-gradient-to-r from-[#D8D8D8] to-[#EAEAEA]" : "bg-secondary"} `}>
+    <div
+      className={`flex justify-between items-end py-2 fixed left-[4.9%] right-[6.6%] pt-[2%] z-[999] ${
+        pathname === "/sign-in"
+          ? "bg-gradient-to-r from-[#D8D8D8] to-[#EAEAEA]"
+          : "bg-secondary"
+      } ${
+        pathname === "/sign-up"
+          ? "bg-gradient-to-r from-[#D8D8D8] to-[#EAEAEA]"
+          : "bg-secondary"
+      } `}
+    >
       <div className="relative w-80">
         <Link to="/" className="absolute -left-9 -bottom-10">
           <img src={logo} alt="BlogPad Logo" className="w-80" />
@@ -53,12 +72,13 @@ export function Navbar() {
           </Link>
         </div>
         <div>
-          <Link to="/sign-in">
+          {!user ? <Link to="/sign-in">
             <Lottie
               animationData={signInIcon}
               className="h-[32px] w-[32px] mb-1 rounded-full hover:scale-125 transition-all duration-300"
             />
           </Link>
+            : <button onClick={handleSignOut}>SignOut</button>}
         </div>
       </div>
     </div>

@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useRef } from "react";
+// import auth from "../../../Firebase/firebase.init";
+// import {
+//   useCreateUserWithEmailAndPassword,
+//   useUpdateProfile,
+// } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import { SocialAuthentication } from "./SocialAuthentication";
 
 export const SignUp = () => {
+  // const [createUserWithEmailAndPassword, user, loading, error] =
+  //   useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+  // const [updateProfile, updating, updateProfileError] = useUpdateProfile(auth);
+
+  // const nameRef = useRef();
+  // const emailRef = useRef();
+  // const passRef = useRef();
+
+  // const handleSignUp = async (event) => {
+  //   event.preventDefault();
+  //   await createUserWithEmailAndPassword(
+  //     nameRef.current.value,
+  //     emailRef.current.value,
+  //     passRef.current.value
+  //   );
+
+  //   await updateProfile({ displayName: nameRef.current.value });
+  // };
+
   return (
     //
     <div className="bg-[url(https://i.ibb.co/5s19Mhr/ath-banner-hd-optimized.jpg)] bg-cover bg-center bg-no-repeat flex justify-around">
-      <div className=" ">
-      </div>
+      <div className=" "></div>
       <div
         className="min-h-screen py-6 flex flex-col justify-center sm:py-12"
         data-aos="zoom-out"
@@ -33,6 +57,7 @@ export const SignUp = () => {
                     >
                       <input
                         id="name"
+                        // ref={nameRef}
                         name="name"
                         type="text"
                         className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
@@ -54,6 +79,7 @@ export const SignUp = () => {
                     >
                       <input
                         id="email"
+                        // ref={emailRef}
                         name="email"
                         type="text"
                         className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
@@ -75,6 +101,7 @@ export const SignUp = () => {
                     >
                       <input
                         id="password"
+                        // ref={passRef}
                         name="password"
                         type="password"
                         className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
