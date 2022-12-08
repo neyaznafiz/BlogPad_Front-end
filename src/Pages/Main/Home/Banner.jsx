@@ -10,7 +10,7 @@ const Banner = () => {
         <div className="text-center py-24 flex flex-col justify-center">
           <h1 className="text-7xl satisfy">Thoughts, stories and ideas</h1>
           <p className="text-lg my-10">
-            Arate is Ghost theme with a sleek and modern design for a personal{" "}
+            Arate is Ghost theme with a sleek and modern design for a personal
             <br />
             fashion or lifestyle blog, an online journal or a magazine.
           </p>
