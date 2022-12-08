@@ -1,9 +1,10 @@
 import React from 'react';
+import Banner from './Banner';
 
 export const Home = () => {
     return (
-        <div>
-            <p className='text-black'>this is home</p>
+        <div className='side-p h-screen '>
+          <Banner/>
         </div>
     );
 };
