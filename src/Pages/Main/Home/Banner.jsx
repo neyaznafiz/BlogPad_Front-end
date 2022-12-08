@@ -1,7 +1,7 @@
 import React from "react";
 import Lottie from "lottie-react";
 import blogging from "../../../Assets/Icon/Blogging.json";
-import mountain from "../../../Assets/mountain.jpeg";
+import mountain from "../../../Assets/cloud.jpg";
 
 const Banner = () => {
   return (
@@ -20,29 +20,29 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className="min-h-[400px] w-[1000px] bg-secondary -mt-60 ml-16 relative">
-        <div className="relative">
-          <img
-            src={mountain}
-            alt=""
-            className="h-96 absolute -top-24 left-10"
-          />
+      <div className="min-h-[400px] w-[1000px] bg-white/95 -mt-60 ml-16 shadow-2xl rounded-md overflow-hidden">
+        <div className="flex">
+          <img src={mountain} alt="" className="h-80" />
+          <p className=" p-3 w-6/12">
+            Odium autem et invidiam facile vitabis. Traditur, inquit, ab Epicuro
+            ratio neglegendi doloris. Quamquam te quidem video esse deterritum.
+            Atqui eorum nihil est eius generis, ut sit in fine atque extrerno
+            bonorum. Modo etiam paulum ad de via declinavi, ut ad Pericli
+            sepulcrum accederem. Si stante, hoc natura videlicet vult, salvam
+            esse se, quod ihi enim satis est, ipsis non satis. Qui-vere falsone,
+            quaerere mittimus-dicitur oculis se privasse. Quantum ingenium
+            consumptum videmus in musicis? Mihi enim satis est, ipsis non satis.
+            His enim rebus detractis negat se, Traditur, inquit, ab Epicuro
+            ratio neglegendi doloris mini quidem video minime esse deterritum.
+            Atqui eorum nihil est eius generis, ut sit in fine atque extrerno
+            bonorum. Modo etiam paulum ad dexteram de via declinavi....
+            <button className="ml-3">Read More...</button>
+          </p>
         </div>
         <div>
-          <h1 className="text-4xl w-[510px] absolute left-96 top-32 text-center">
+          <h1 className="text-4xl text-center py-2 uppercase">
             The sky perfectly blended into the landscape
           </h1>
-
-          <p className="absolute -bottom-2 p-10">
-            Et harum quidem rerum facilis est et expedita distinctio. Ut
-            proverbia non nulla veriora sint quam vestra dogmata. Si sapiens, ne
-            tum quidem miser, cum ab Oroete, praetore Darei, in crucem actus
-            est. Tum ille timide vel potius verecunde: Facio, inquit. Quae
-            similitudo in genere etiam humano apparet. Quo plebiscito decreta a
-            senatu est consuli...
-          </p>
-
-          <button className="absolute right-2 top-2 border-2 border-black px-7 py-2 rounded-full hover:bg-primary hover:text-white hover:border-none transition-all duration-300">Read More</button>
         </div>
       </div>
     </div>
