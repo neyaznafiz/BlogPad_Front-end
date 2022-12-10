@@ -9,7 +9,7 @@ import { store } from "./ReduxFile";
 function App() {
   Aos.init({ duration: 1200, mirror: false });
   return (
-    <div className="">
+    <div className="bg-secondary">
       <Provider store={store}>
         <RouterProvider router={routes} />
         </Provider>

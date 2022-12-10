@@ -4,7 +4,7 @@ import blogIcon from "@/Assets/Icon/blog-icon.json";
 
 export const BlogCard = ({ blog }) => {
   return (
-    <div className="w-96 h-[500px] shadow-2xl">
+    <div className="w-96 h-[500px] shadow-2xl ">
       <Lottie animationData={blogIcon} className="w-44 mx-auto" />
       <div className="h-[280px]">
         <div>

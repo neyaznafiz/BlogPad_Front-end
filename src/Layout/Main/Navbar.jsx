@@ -20,14 +20,14 @@ export function Navbar() {
 
   return (
     <div
-      className={`flex justify-between items-end py-2 fixed left-[4.9%] right-[6.6%] pt-[2%] z-[999] ${
+      className={`flex justify-between items-end py-2 fixed pl-[4.9%] pr-[6.6%] pt-[2%] z-[999] ${
         pathname === "/sign-in"
           ? "bg-gradient-to-r from-[#D8D8D8] to-[#EAEAEA]"
-          : "bg-secondary"
+          : "bg-secondary w-screen"
       } ${
         pathname === "/sign-up"
           ? "bg-gradient-to-r from-[#D8D8D8] to-[#EAEAEA]"
-          : "bg-secondary"
+          : "bg-secondary w-screen"
       } `}
     >
       <div className="relative w-80">

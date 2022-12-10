@@ -12,14 +12,19 @@ export function AllBlogs() {
     dispatch(fetchBlogs());
   }, [dispatch]);
 
-    let content;
-    if (blogs?.length) {
-        content = blogs.map(blog => <BlogCard key={blog._id} blog={blog} />)
-    }
+  let content;
+  if (blogs?.length) {
+    content = blogs.map((blog) => <BlogCard key={blog._id} blog={blog} />);
+  }
 
   return (
     <div className="side-p">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-10 mx-auto my-10">{content}</div>
+      <div className="my-7 text-center">
+        <h1 className="text-3xl uppercase border-b-2 border-black pb-2">all blogs</h1>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center pb-20 mt-20">
+        {content}
+      </div>
     </div>
   );
 }
