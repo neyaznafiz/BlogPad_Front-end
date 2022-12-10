@@ -8,7 +8,7 @@ const Sidebar = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className='col-span-2 bg-[#ccac00] h-[calc(100vh-25px)] p-5 rounded-lg uppercase font-semibold shadow-2xl'>
+    <div className='col-span-2 bg-primary h-[calc(100vh-25px)] p-5 rounded-lg uppercase font-semibold shadow-2xl'>
       <ul className='flex gap-3  flex-col h-full'>
         <li className="bg-secondary p-2 rounded-full text-center tracking-wider mb-5">Admin Dashboard</li>
         <li>
