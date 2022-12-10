@@ -5,7 +5,7 @@ import mountain from "@/Assets/cloud.jpg";
 
 const Banner = () => {
   return (
-    <div>
+    <div >
       <div className="bg-gradient-to-r from-[#f8b249] to-[#b18440] min-h-[600px] mt-7">
         <div className="text-center py-24 flex flex-col justify-center">
           <h1 className="text-7xl satisfy">Thoughts, stories and ideas</h1>

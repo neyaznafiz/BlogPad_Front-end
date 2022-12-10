@@ -1,6 +1,5 @@
 import { loadBlogs } from "@/ReduxFile/ActionCreators";
 import { data } from "autoprefixer";
-// import { loadBlogs } from "";
 
 export const fetchBlogs = () => {
   return async (dispatch, getState) => {
