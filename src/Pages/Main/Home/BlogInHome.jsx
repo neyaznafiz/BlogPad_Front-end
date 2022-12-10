@@ -8,7 +8,6 @@ import rightArrow from "../../../Assets/Icon/right-arrow.json";
 
 export const BlogInHome = () => {
   const blogs = useSelector((state) => state.blog.blogs);
-  console.log(blogs);
   const dispatch = useDispatch();
 
   useEffect(() => {

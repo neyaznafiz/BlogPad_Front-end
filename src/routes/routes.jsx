@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import React from "react";
 import { Dashboard, Main } from "../Layout";
 import { About, AddBlog, AllBlogs, BlogList, Home, SignIn, SignUp } from "../Pages";
+import { BlogDetails } from "../Components";
 
 const routes = createBrowserRouter([
   {
@@ -13,8 +14,16 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/:ID",
+        element: <BlogDetails />,
+      },
+      {
         path: "/all-blogs",
         element: <AllBlogs />,
+      },
+      {
+        path: "/all-blogs/:ID",
+        element: <BlogDetails />,
       },
       {
         path: "/about",

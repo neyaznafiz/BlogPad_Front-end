@@ -5,7 +5,6 @@ import { fetchBlogs } from "@/ReduxFile/Thunk";
 
 export const AllBlogs = () => {
   const blogs = useSelector((state) => state.blog.blogs);
-  console.log(blogs);
   const dispatch = useDispatch();
 
   useEffect(() => {
