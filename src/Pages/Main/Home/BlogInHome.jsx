@@ -4,17 +4,27 @@ import { BlogCard } from "@/Components/BlogCard";
 import { fetchBlogs } from "@/ReduxFile/Thunk";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
-import rightArrow from "../../../Assets/Icon/right-arrow.json";
+import rightArrow from "@/Assets/Icon/right-arrow.json";
+import loadingIcon from "@/Assets/loading.json"
 
 export const BlogInHome = () => {
   const blogs = useSelector((state) => state.blog.blogs);
+  const loading = useSelector((state) => state.blog.loading);
   const dispatch = useDispatch();
+  let content;
+
+  if (loading) {
+    content = (
+      <div className="w-screen -ml-28 mx-auto">
+        <Lottie animationData={loadingIcon} className=" w-72 mx-auto" />
+      </div>
+    );
+  }
 
   useEffect(() => {
     dispatch(fetchBlogs());
   }, [dispatch]);
 
-  let content;
   if (blogs?.length) {
     content = [...blogs]
       .reverse()

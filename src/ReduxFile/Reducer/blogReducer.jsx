@@ -1,15 +1,29 @@
-import { LOAD_BLOG, LOAD_SINGLE_BLOG_BY_ID } from "../ActionTypes/actionTypes";
+import {
+  LOAD_START,
+  LOAD_BLOG,
+  LOAD_SINGLE_BLOG_BY_ID,
+} from "../ActionTypes/actionTypes";
 
 const initialState = {
+  loading: true,
   blog: [],
 };
 
 export const blogReducer = (state = initialState, action) => {
   switch (action.type) {
+    // loading
+    // case LOAD_START: {
+    //   return {
+    //     ...state,
+    //     loading: true,
+    //   };
+    // }
+
     //   get all blog
     case LOAD_BLOG: {
       return {
         ...state,
+        // loading: false,
         blogs: action.payload,
       };
     }
@@ -18,7 +32,8 @@ export const blogReducer = (state = initialState, action) => {
     case LOAD_SINGLE_BLOG_BY_ID: {
       return {
         ...state,
-        blogs:  state.blogs.find((blog) => blog._id === action.payload),
+        loading: false,
+        blogs: state.blogs.find((blog) => blog._id === action.payload),
       };
     }
     default:

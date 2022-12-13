@@ -1,4 +1,11 @@
-import { LOAD_BLOG, LOAD_SINGLE_BLOG_BY_ID } from "../ActionTypes/actionTypes";
+import { LOAD_BLOG, LOAD_SINGLE_BLOG_BY_ID, LOAD_START } from "../ActionTypes/actionTypes";
+
+// loading
+// export const loadStart = () => {
+//   return {
+//     type: LOAD_START,
+//   };
+// };
 
 // get all blogs
 export const loadBlogs = (data) => {
